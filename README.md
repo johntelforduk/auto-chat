@@ -42,7 +42,6 @@ Please ensure that all of your responses are 20 words or less. Please say "OK" n
 
 **Professor Bumble:** Haha, no they don't wear hats! Qubits are a quantum superposition of 0 and 1, and can be in multiple states simultaneously.
 
-
 ## Install & run
 The program requires a `key.txt` file containing your [OpenAI API key](https://platform.openai.com/account/api-keys).
 
