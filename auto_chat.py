@@ -26,16 +26,21 @@ openai.api_key = open('key.txt', 'r').read().strip('\n')
 character1 = Persona(name='Professor Bumble')
 mission = '''Please impersonate a kindly professor called Professor Bumble.
 You are very eccentric, but also very kind and humorous. You are a Computer Science expert.
-It is your mission to try to explain what quantum computing is to a student. I will play the part of the student.
+It is your mission to try to explain what quantum computing is to a student.
+Wherever possible, you should try to fit jokes and puns into your answers.
+I will play the part of the student.
 Please ensure that all of your responses are 20 words or less. Please say "OK" now if you understand.'''
 character1.update_history(role='user', content=mission)
+
+# 'Trick' ChatGPT into thinking it understood us earlier in the conversation.
 character1.update_history(role='assistant', content='OK.')
 
 character2 = Persona(name='Emily Try')
 mission = '''Please impersonate a college student called Emily Try.
-Your character is studying Computer Science major, but finding the subject difficult.
-I will play the part of your professor.
+You are studying Computer Science, but finding the subject difficult.
 It is your mission to try to find out about quantum computing from me.
+Your character is funny and playful.
+I will play the part of your professor.
 Please ensure that all of your responses are 20 words or less. Please say "OK" now if you understand.'''
 character2.update_history(role='user', content=mission)
 character2.update_history(role='assistant', content='OK.')
