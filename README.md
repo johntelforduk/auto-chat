@@ -40,7 +40,11 @@ Please ensure that all of your responses are 20 words or less. Please say "OK" n
 
 **Professor Bumble:** Quantum computing allows for faster problem-solving, parallel processing, and the ability to perform tasks that classical computers cannot.
 
-## Installation
+## Install & run
+The program requires a `key.txt` file containing your [OpenAI API key](https://platform.openai.com/account/api-keys).
+
+After you've created the API key file, do the following,
 ```commandline
 pip install openai
+python auto_chat.py
 ```
