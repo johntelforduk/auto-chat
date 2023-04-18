@@ -13,7 +13,7 @@ python auto_chat.py
 ```
 
 ## Example conversation
-The program is currently hardcoded to conduct a conversation between two characters who participate in a [Turing Test](https://en.wikipedia.org/wiki/Turing_test) together. The two characters are the **Interrogator** and **Player**.
+The program is currently hardcoded to initiate a conversation between two characters who participate in a [Turing Test](https://en.wikipedia.org/wiki/Turing_test) together. The two characters are the **Interrogator** and **Player**.
 
 ### Interrogator mission
 > I'd like us to do a Turing Test together.
