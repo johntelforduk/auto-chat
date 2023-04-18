@@ -1,7 +1,7 @@
 # Auto Chat
-Automatic conversation between 2 ChatGPT powered characters.
+Automatic conversation between a pair of [OpenAI](https://openai.com/) [GPT](https://en.wikipedia.org/wiki/Generative_pre-trained_transformer) powered characters.
 
-Each character is created by asking ChatGPT to impersonate someone. ChatGPT is told that the user will play the other part in the conversation... but in fact the other ChatGPT character will be the 'user'. In this way, the program runs two ChatGPT conversations at the same time - with the 'assistant' responses from 1 conversation being used as the 'user' responses in the other one.
+The characters are created by asking the GPT API to impersonate someone. Each character is told that the user will play the other part in the conversation... but in fact the other GPT character will be the 'user'. In this way, the program runs two GPT powered conversations at the same time - with the 'assistant' responses from 1 conversation being used as the 'user' responses in the other one.
 
 ## Install & run
 The program requires a `key.txt` file containing your [OpenAI API key](https://platform.openai.com/account/api-keys).
@@ -13,7 +13,7 @@ python auto_chat.py
 ```
 
 ## Example conversation
-The program is currently hardcoded to initiate a conversation between two characters who participate in a [Turing Test](https://en.wikipedia.org/wiki/Turing_test) together. The two characters are the **Interrogator** and **Player**.
+The program is currently hardcoded to initiate a conversation between two characters who participate in a [Turing test](https://en.wikipedia.org/wiki/Turing_test) together. The two characters are the **Interrogator** and **Player**.
 
 ### Interrogator mission
 > I'd like us to do a Turing Test together.

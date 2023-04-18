@@ -1,3 +1,5 @@
+# Conduct a conversation between a couple of GPT powered characters.
+
 import openai
 
 MODEL = 'gpt-3.5-turbo'
@@ -19,7 +21,7 @@ Please say "OK" now if you understand.'''
         print('------------')
         self.update_history(role='user', content=mission)
 
-        # 'Trick' ChatGPT into thinking it understood us earlier in the conversation.
+        # 'Trick' GPT into thinking it understood us earlier in the conversation.
         self.update_history(role='assistant', content='OK.')
 
     def update_history(self, role: str, content: str):
