@@ -1,5 +1,7 @@
 import openai
 
+MODEL = 'gpt-3.5-turbo'
+
 
 class Persona:
 
@@ -26,7 +28,7 @@ Please say "OK" now if you understand.'''
 
     def chat(self, prompt: str) -> str:
         self.update_history(role='user', content=prompt)
-        completion = openai.ChatCompletion.create(model='gpt-3.5-turbo', messages=self.history)
+        completion = openai.ChatCompletion.create(model=MODEL, messages=self.history)
         self.total_tokens = int(completion.usage.total_tokens)
         response = completion.choices[0].message.content
 
