@@ -2,7 +2,16 @@
 
 import openai
 
+# Use list_chatgpt_models.py to see a list of currently available models.
 MODEL = 'gpt-3.5-turbo'
+
+
+def cost_calc(num_tokens: int) -> float:
+    """
+    For parm number of tokens used, return cost incurred in USD.
+    """
+    # From, https://openai.com/pricing, gpt-3.5-turbo is $0.002 per 1000 tokens.
+    return num_tokens * 0.002 / 1000
 
 
 class Persona:
@@ -11,7 +20,7 @@ class Persona:
 
         self.name = name
         self.history = []
-        self.total_tokens = 0
+        self.cumulative_tokens = 0
 
     def give_mission(self, mission: str):
         mission += '''\nPlease ensure that all of your responses are 20 words or less.
@@ -31,7 +40,7 @@ Please say "OK" now if you understand.'''
     def chat(self, prompt: str) -> str:
         self.update_history(role='user', content=prompt)
         completion = openai.ChatCompletion.create(model=MODEL, messages=self.history)
-        self.total_tokens = int(completion.usage.total_tokens)
+        self.cumulative_tokens += int(completion.usage.total_tokens)
         response = completion.choices[0].message.content
 
         print(self.name + ': ' + response)
@@ -62,3 +71,7 @@ c1 = character1.chat(prompt='Hello.')
 for i in range(12):
     c2 = character2.chat(prompt=c1)
     c1 = character1.chat(prompt=c2)
+
+total_tokens_used = character1.cumulative_tokens + character2.cumulative_tokens
+print('\nTotal tokens used:', total_tokens_used)
+print('Cost incurred (USD):', cost_calc(total_tokens_used))
