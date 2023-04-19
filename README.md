@@ -12,6 +12,9 @@ pip install openai
 python auto_chat.py
 ```
 
+## Costs
+The program is currently configured to use the **gpt-3.5-turbo** model, which (at time of writing) has a [cost](https://openai.com/pricing) of $0.002 per 1,000 tokens. In testing, typical conversations use about 10,000 tokens, which is a cost of about 2 cents. Note, new OpenAI accounts usually come with some token credits.
+
 ## Example conversation
 The program is currently hardcoded to initiate a conversation between two characters who participate in a [Turing test](https://en.wikipedia.org/wiki/Turing_test) together. The two characters are the **Interrogator** and **Player**.
 
