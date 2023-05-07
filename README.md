@@ -1,4 +1,6 @@
 # Auto Chat
+![status](https://img.shields.io/badge/status-ready%20to%20use-green)
+
 Automatic conversation between a pair of [OpenAI](https://openai.com/) [GPT](https://en.wikipedia.org/wiki/Generative_pre-trained_transformer) powered characters.
 
 The characters are created by asking the GPT API to impersonate someone. Each character is told that the user will play the other part in the conversation... but in fact the other GPT character will be the 'user'. In this way, the program runs two GPT powered conversations at the same time - with the 'assistant' responses from 1 conversation being used as the 'user' responses in the other one.
