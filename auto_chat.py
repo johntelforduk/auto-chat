@@ -3,7 +3,7 @@
 import openai
 
 # Use list_chatgpt_models.py to see a list of currently available models.
-MODEL = 'gpt-3.5-turbo'
+MODEL = 'gpt-4-0613'
 
 
 def cost_calc(num_tokens: int) -> float:
